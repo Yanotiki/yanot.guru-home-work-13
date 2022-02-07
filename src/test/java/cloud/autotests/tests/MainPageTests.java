@@ -1,23 +1,27 @@
 package cloud.autotests.tests;
 
 import cloud.autotests.helpers.DriverUtils;
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.conditions.Text;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.title;
+import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-public class GeneratedTests extends TestBase {
+public class MainPageTests extends TestBase {
     @Test
     @Description("Soon to be implemented by you (or QA.GURU engineers)")
     @DisplayName("Main page should contain track option")
-    void generatedTest() {
+    void trackOptionTest() {
         step("Open 'https://www.pochta.ru/'", () -> {
-            step("// todo: just add selenium action");
+            open("https://www.pochta.ru/");
+            $x("//input[@id='barcode']")
+                    .shouldBe(Condition.visible)
+                    .shouldHave(Condition.attribute("placeholder","Введите трек-номер"));
         });
     }
 
