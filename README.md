@@ -1,44 +1,50 @@
-# Project in Allure TestOps with manual & automated tests
-<a target="_blank" href="https://allure.autotests.cloud/project/%s">allure.autotests.cloud/project/%s</a> (ask admin@qa.guru for access)
+# Автотесты для сайта Почты России
+![Intelij_IDEA](img/icons/ПочтаРоссии.png)
 
-# Jenkins job
-<a target="_blank" href="https://jenkins.autotests.cloud/job/%s">jenkins.autotests.cloud/job/%s</a>
+##Используемые технологии и инструменты
+![Intelij_IDEA](img/icons/Intelij_IDEA.png)![Java](img/icons/Java.png)![Selenide](img/icons/Selenide.png)![Selenoid](img/icons/Selenoid.png)![Gradle](img/icons/Gradle.png)![JUnit5](img/icons/JUnit5.png)![Allure Report](img/icons/Allure_Report.png)![AllureTestOps](img/icons/AllureTestOps.png)![Github](img/icons/Github.png)![Jenkins](img/icons/Jenkins.png)![Rest-Assured](img/icons/Rest-Assured.png)![Telegram](img/icons/Telegram.png)![Jira](img/icons/Jira.png)
 
+# Джоба в Jenkins 
+<a target="_blank" href="jenkins.autotests.cloud/job/010-KseniyaAtygaeva-hw13">jenkins.autotests.cloud/job/010-KseniyaAtygaeva-hw13</a>
 
-# USAGE examples
+### Используемые параметры по умолчанию
 
-### For run remote tests need fill remote.properties or to pass value:
+![Jenkins](./img/Jenkins.png)
 
 * browser (default chrome)
-* browserVersion (default 89.0)
+* browserVersion (default 91.0)
 * browserSize (default 1920x1080)
 * browserMobileView (mobile device name, for example iPhone X)
 * remoteDriverUrl (url address from selenoid or grid)
 * videoStorage (url address where you should get video)
 * threads (number of threads)
 
-
-Run tests with filled remote.properties:
+## Локальный запуск:
 ```bash
 gradle clean test
 ```
 
-Run tests with not filled remote.properties:
+##Удаленный запуск:
 ```bash
 gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
 ```
+___
+## После прохождения тестов приходит оповещение в Telegram через бот 
 
-Serve report:
-```bash
-allure serve build/allure-results
-```
+#### После прохождения всех тестов, приходит отчет в канал в телеграме:
+![Telegram](img/Telegram.png)
 
+---
+## Анализ результатов
+Ссылку на отчет Allure можно найти в 
+* Сообщении Telegram
+* В последней сборке Jenkins
 
-###### For further development there are some example tests in src/test/java/cloud.autotests/tests/demowebshop
-* remove @Disabled("...") annotation to run tests
-```bash
-gradle clean demowebshop
-```
+Allure report (пример):
+<a target="_blank" href="https://jenkins.autotests.cloud/job/010-KseniyaAtygaeva-hw13/8/allure/">https://jenkins.autotests.cloud/job/010-KseniyaAtygaeva-hw13/8/allure/</a>
+![Allure](img/Allure_jenkins.png)
 
-:heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
-:blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
+---
+### Пример видео прохождения теста, прикрепляется к Allure отчету после каждого прохождения теста
+
+![video](./img/selenoid_gif.gif)
