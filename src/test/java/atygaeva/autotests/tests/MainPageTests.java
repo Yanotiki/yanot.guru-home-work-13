@@ -14,7 +14,6 @@ import java.util.List;
 
 import static atygaeva.autotests.pages.TrackingPage.openTrackingPage;
 
-
 public class MainPageTests extends BaseTest {
 
     private PostMainPage mainPage = new PostMainPage();

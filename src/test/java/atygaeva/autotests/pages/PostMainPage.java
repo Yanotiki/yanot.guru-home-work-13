@@ -9,9 +9,9 @@ import org.assertj.core.api.Assertions;
 
 import java.util.List;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.url;
-import static com.codeborne.selenide.Condition.visible;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PostMainPage {
@@ -30,7 +30,6 @@ public class PostMainPage {
     public SelenideElement scrollTo(String label) {
         return $x("//label[text()='" + label + "']");
     }
-
 
     @Step("Set Track Number Field with value '{trackNumber}'")
     public TrackingPage setTrackNumberField(String trackNumber) {
@@ -79,7 +78,7 @@ public class PostMainPage {
                 .shouldHave(Condition.attribute("placeholder", text));
     }
 
-    @Step("Verify Post Main Page url is 'MAIN_PAGE_URL'")
+    @Step("Verify Post Main Page url is '{MAIN_PAGE_URL}'")
     public void verifyPostMainPageUrl() {
         webdriver().shouldHave(url(MAIN_PAGE_URL));
     }

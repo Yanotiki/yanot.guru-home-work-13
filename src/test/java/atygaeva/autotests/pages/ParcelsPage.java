@@ -20,7 +20,7 @@ public class ParcelsPage {
         header.shouldBe(Condition.visible);
     }
 
-    @Step ("Verify that field '{field}' has value '{city}'")
+    @Step("Verify that field '{field}' has value '{city}'")
     public void verifyThatFieldHasValue(String field, String city) {
         SelenideElement cityField = cityFromOrToField(field);
         Assertions.assertThat(cityField.getValue()).contains(city);

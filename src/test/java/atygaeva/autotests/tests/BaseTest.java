@@ -27,7 +27,7 @@ public class BaseTest {
     }
 
     @BeforeEach
-    @Step("Open main page 'MAIN_PAGE_URL'")
+    @Step("Open main page '{MAIN_PAGE_URL}'")
     void openMainPage() {
         open(MAIN_PAGE_URL);
     }
