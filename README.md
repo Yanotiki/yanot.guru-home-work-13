@@ -6,19 +6,8 @@
 ![Intelij_IDEA](img/icons/Intelij_IDEA.png)![Java](img/icons/Java.png)![Selenide](img/icons/Selenide.png)![Selenoid](img/icons/Selenoid.png)![Gradle](img/icons/Gradle.png)![JUnit5](img/icons/JUnit5.png)![Allure Report](img/icons/Allure_Report.png)![Github](img/icons/Github.png)![Jenkins](img/icons/Jenkins.png)![Telegram](img/icons/Telegram.png)
 
 # Джоба в Jenkins 
+с параметрами:
 <a target="_blank" href="jenkins.autotests.cloud/job/010-KseniyaAtygaeva-hw13">jenkins.autotests.cloud/job/010-KseniyaAtygaeva-hw13</a>
-
-### Используемые параметры по умолчанию
-
-![Jenkins](./img/Jenkins.png)
-
-* browser (default chrome)
-* browserVersion (default 91.0)
-* browserSize (default 1920x1080)
-* browserMobileView (mobile device name, for example iPhone X)
-* remoteDriverUrl (url address from selenoid or grid)
-* videoStorage (url address where you should get video)
-* threads (number of threads)
 
 ## Локальный запуск через терминал:
 ```bash
@@ -49,4 +38,4 @@ Allure report (пример):
 ---
 ### Пример видео прохождения теста, прикрепляется к Allure отчету после каждого прохождения теста
 
-![video](./img/selenoid_gif.gif)
+![video](./img/Selenoid_gif.gif)
