@@ -25,9 +25,10 @@
 gradlew clean test & gradlew allureReport
 ```
 
-## Удаленный запуск:
+## Удаленный запуск через терминал:
 ```bash
-gradlew clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test & gradlew allureReport
+gradlew clean test -DremoteDriverUrl=https://user1:1234@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1  & gradlew allureReport
+
 ```
 ___
 ## После прохождения тестов приходит оповещение в Telegram через бот 
