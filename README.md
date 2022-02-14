@@ -34,6 +34,7 @@ ___
 Allure report (пример):
 <a target="_blank" href="https://jenkins.autotests.cloud/job/010-KseniyaAtygaeva-hw13/8/allure/">https://jenkins.autotests.cloud/job/010-KseniyaAtygaeva-hw13/8/allure/</a>
 ![Allure](img/Allure_jenkins.png)
+![Allure](img/Allure.png)
 
 ---
 ### Пример видео прохождения теста, прикрепляется к Allure отчету после каждого прохождения теста
