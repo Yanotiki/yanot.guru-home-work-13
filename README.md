@@ -1,8 +1,9 @@
 # Автотесты для сайта Почты России
 ![Intelij_IDEA](img/icons/ПочтаРоссии.png)
 
-##Используемые технологии и инструменты
-![Intelij_IDEA](img/icons/Intelij_IDEA.png)![Java](img/icons/Java.png)![Selenide](img/icons/Selenide.png)![Selenoid](img/icons/Selenoid.png)![Gradle](img/icons/Gradle.png)![JUnit5](img/icons/JUnit5.png)![Allure Report](img/icons/Allure_Report.png)![AllureTestOps](img/icons/AllureTestOps.png)![Github](img/icons/Github.png)![Jenkins](img/icons/Jenkins.png)![Rest-Assured](img/icons/Rest-Assured.png)![Telegram](img/icons/Telegram.png)![Jira](img/icons/Jira.png)
+## Используемые технологии и инструменты
+
+![Intelij_IDEA](img/icons/Intelij_IDEA.png)![Java](img/icons/Java.png)![Selenide](img/icons/Selenide.png)![Selenoid](img/icons/Selenoid.png)![Gradle](img/icons/Gradle.png)![JUnit5](img/icons/JUnit5.png)![Allure Report](img/icons/Allure_Report.png)![Github](img/icons/Github.png)![Jenkins](img/icons/Jenkins.png)![Telegram](img/icons/Telegram.png)
 
 # Джоба в Jenkins 
 <a target="_blank" href="jenkins.autotests.cloud/job/010-KseniyaAtygaeva-hw13">jenkins.autotests.cloud/job/010-KseniyaAtygaeva-hw13</a>
@@ -19,14 +20,14 @@
 * videoStorage (url address where you should get video)
 * threads (number of threads)
 
-## Локальный запуск:
+## Локальный запуск через терминал:
 ```bash
-gradle clean test
+gradlew clean test & gradlew allureReport
 ```
 
-##Удаленный запуск:
+## Удаленный запуск:
 ```bash
-gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
+gradlew clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test & gradlew allureReport
 ```
 ___
 ## После прохождения тестов приходит оповещение в Telegram через бот 
