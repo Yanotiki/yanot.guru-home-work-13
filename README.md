@@ -11,7 +11,7 @@
 
 ## Запуск через Jenkins с параметрами:
 
-![Jenkins](img/Jenkins.png)
+![Jenkins](img/JenkinsRun.png)
 
 ## Локальный запуск через терминал:
 ```bash
