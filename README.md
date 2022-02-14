@@ -9,12 +9,16 @@
 с параметрами:
 <a target="_blank" href="jenkins.autotests.cloud/job/010-KseniyaAtygaeva-hw13">jenkins.autotests.cloud/job/010-KseniyaAtygaeva-hw13</a>
 
+## Запуск через Jenkins с параметрами:
+
+![Jenkins](img/Jenkins.png)
+
 ## Локальный запуск через терминал:
 ```bash
 gradlew clean test & gradlew allureReport
 ```
 
-## Удаленный запуск через терминал:
+## Удаленный запуск через терминал с параметрами:
 ```bash
 gradlew clean test -DremoteDriverUrl=https://user1:1234@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1  & gradlew allureReport
 
